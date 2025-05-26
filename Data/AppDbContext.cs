@@ -1,6 +1,5 @@
 using Test.Models;
 using Microsoft.EntityFrameworkCore;
-
 namespace Test.Data
 {
     public class AppDbContext : DbContext
@@ -17,6 +16,7 @@ namespace Test.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            
             modelBuilder.Entity<Post>().HasData(
                 new Post
                 {
